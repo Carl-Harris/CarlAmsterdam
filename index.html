@@ -7,22 +7,16 @@
       name="description"
       content="Programmet för Carls 30-årshelg i Amsterdam, 16–18 oktober 2026."
     />
-    <meta name="theme-color" content="#f2ff54" />
+    <meta name="theme-color" content="#030104" />
     <meta property="og:type" content="website" />
     <meta property="og:locale" content="sv_SE" />
-    <meta property="og:title" content="Carls 30-årshelg i Amsterdam" />
+    <meta property="og:title" content="Utvandraren från Dalby — TRETTIO ÅR" />
     <meta
       property="og:description"
       content="En helg med kanaler, god mat och ännu bättre sällskap. 16–18 oktober 2026."
     />
-    <meta
-      property="og:image"
-      content="https://carl-harris.github.io/CarlAmsterdam/assets/moments/03.jpeg"
-    />
-    <meta property="og:image:alt" content="Ett glatt ögonblick från tidigare äventyr." />
     <meta property="og:url" content="https://carl-harris.github.io/CarlAmsterdam/" />
-    <meta name="twitter:card" content="summary_large_image" />
-    <title>Carls 30-årshelg i Amsterdam — 16–18 oktober 2026</title>
+    <title>Utvandraren från Dalby — TRETTIO ÅR</title>
     <link rel="icon" href="assets/favicon.svg" type="image/svg+xml" />
     <link rel="stylesheet" href="assets/amsterdam.css" />
     <script src="assets/main.js" defer></script>
@@ -40,7 +34,6 @@
       </a>
       <nav aria-label="Huvudmeny">
         <a href="#program">Program</a>
-        <a href="#bilder">Bilder</a>
       </nav>
     </header>
 
@@ -61,15 +54,11 @@
               <path d="M50 91V48M50 54C38 42 30 27 34 12c10 8 17 20 18 34M48 61C31 58 17 49 9 34c18 0 31 7 40 20M52 61c17-3 31-12 39-27-18 0-31 7-40 20M51 48c1-14 8-26 18-36 4 15-4 30-16 42M48 69c-11 1-21 6-28 15 12 1 22-3 29-10M52 69c11 1 21 6 28 15-12 1-22-3-29-10" />
             </svg>
           </div>
-          <figure class="hero-photo">
-            <img
-              src="assets/moments/03.jpeg"
-              alt="Vänner samlade runt ett bord utomhus."
-              width="1500"
-              height="2000"
-            />
-          </figure>
         </div>
+        <button class="chaos-toggle" type="button" aria-pressed="false">
+          <span aria-hidden="true"></span>
+          Maxa
+        </button>
 
         <div class="amsterdam-scene" aria-label="Illustration av Amsterdam med kanalhus, bro, cykel och tulpaner">
           <svg viewBox="0 0 1400 560" role="img" aria-labelledby="scene-title scene-description">
@@ -137,6 +126,10 @@
         </a>
       </section>
 
+      <div class="techno-strip" aria-hidden="true">
+        <span>× × ×</span><i>✦</i><span>♧</span><i>✦</i><span>× × ×</span><i>✦</i><span>♧</span><i>✦</i>
+      </div>
+
       <section class="schedule section-wrap" id="program" aria-labelledby="program-title">
         <div class="section-heading">
           <h2 id="program-title">Program.</h2>
@@ -191,14 +184,6 @@
             aria-labelledby="tab-fredag"
             data-panel="fredag"
           >
-            <figure class="day-photo">
-              <img
-                src="assets/moments/01.jpeg"
-                alt="Två vänner med varsin dryck."
-                width="923"
-                height="1999"
-              />
-            </figure>
             <ol class="timeline">
               <li>
                 <div class="time-badge">Under dagen</div>
@@ -240,14 +225,6 @@
             aria-labelledby="tab-lordag"
             data-panel="lordag"
           >
-            <figure class="day-photo day-photo--wide">
-              <img
-                src="assets/moments/09.jpeg"
-                alt="Två vänner i färgat kvällsljus."
-                width="1093"
-                height="2000"
-              />
-            </figure>
             <ol class="timeline">
               <li>
                 <div class="time-badge">Lunch</div>
@@ -297,14 +274,6 @@
             aria-labelledby="tab-sondag"
             data-panel="sondag"
           >
-            <figure class="day-photo">
-              <img
-                src="assets/moments/04.jpeg"
-                alt="Fyra vänner utomhus."
-                width="1500"
-                height="2000"
-              />
-            </figure>
             <ol class="timeline">
               <li>
                 <div class="time-badge">Förmiddag</div>
@@ -329,61 +298,6 @@
         </div>
       </section>
 
-      <section class="gallery section-wrap" id="bilder" aria-labelledby="gallery-title">
-        <div class="gallery-heading">
-          <h2 id="gallery-title">Arkivet.</h2>
-        </div>
-        <div class="photo-collage">
-          <figure class="photo photo--one">
-            <img
-              src="assets/moments/02.jpeg"
-              alt="En vän utomhus i kvällsljus."
-              width="925"
-              height="2000"
-              loading="lazy"
-            />
-          </figure>
-          <figure class="photo photo--two">
-            <img
-              src="assets/moments/05.jpg"
-              alt="En vän vid en bardisk."
-              width="576"
-              height="1024"
-              loading="lazy"
-            />
-          </figure>
-          <figure class="photo photo--three">
-            <img
-              src="assets/moments/06.jpg"
-              alt="En grupp vänner ute på kvällen."
-              width="1224"
-              height="1224"
-              loading="lazy"
-            />
-          </figure>
-          <figure class="photo photo--four">
-            <img
-              src="assets/moments/07.jpg"
-              alt="En vän i röd mössa."
-              width="720"
-              height="960"
-              loading="lazy"
-            />
-          </figure>
-          <figure class="photo photo--five">
-            <img
-              src="assets/moments/08.jpeg"
-              alt="En vän med solglasögon höjer ett glas."
-              width="704"
-              height="960"
-              loading="lazy"
-            />
-          </figure>
-          <div class="gallery-sticker" aria-hidden="true">
-            <span>30</span>
-          </div>
-        </div>
-      </section>
     </main>
 
     <footer>

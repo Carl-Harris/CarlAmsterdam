@@ -44,3 +44,34 @@ tabGroups.forEach((group) => {
 
   activateTab(tabs.find((tab) => tab.classList.contains("is-active")) ?? tabs[0]);
 });
+
+const reducedMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+const chaosToggle = document.querySelector(".chaos-toggle");
+const reactiveElements = document.querySelectorAll(".event-card, .day-tab");
+
+chaosToggle?.addEventListener("click", () => {
+  const active = document.body.classList.toggle("maximum-chaos");
+  chaosToggle.setAttribute("aria-pressed", String(active));
+});
+
+if (!reducedMotion) {
+  window.addEventListener("pointermove", (event) => {
+    document.documentElement.style.setProperty("--pointer-x", `${event.clientX}px`);
+    document.documentElement.style.setProperty("--pointer-y", `${event.clientY}px`);
+  });
+
+  reactiveElements.forEach((element) => {
+    element.addEventListener("pointermove", (event) => {
+      const bounds = element.getBoundingClientRect();
+      const x = (event.clientX - bounds.left) / bounds.width - 0.5;
+      const y = (event.clientY - bounds.top) / bounds.height - 0.5;
+      element.style.setProperty("--rotate-x", `${y * -5}deg`);
+      element.style.setProperty("--rotate-y", `${x * 7}deg`);
+    });
+
+    element.addEventListener("pointerleave", () => {
+      element.style.setProperty("--rotate-x", "0deg");
+      element.style.setProperty("--rotate-y", "0deg");
+    });
+  });
+}
