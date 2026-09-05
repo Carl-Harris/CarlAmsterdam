@@ -36,6 +36,5 @@ repositoryts **Settings → Pages**.
 - `index.html` – semantiskt innehåll och program
 - `assets/amsterdam.css` – layout, färger, responsivitet och reducerad rörelse
 - `assets/main.js` – tangentbordsstyrda programflikar
-- `assets/photos/` – de fyra oförändrade originalbilderna
-- `assets/venues/` – oförändrade lokalbilder och optimerade webbderivat
+- `assets/moments/` – de nio bilderna som används över hela sidan
 - `scripts/` – lokal server, innehållskontroll och statisk bygg

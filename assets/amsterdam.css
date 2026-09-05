@@ -150,7 +150,7 @@ a:focus-visible {
   display: grid;
   max-width: 1320px;
   margin: 0 auto;
-  grid-template-columns: 34px minmax(0, 1fr) minmax(170px, 0.36fr);
+  grid-template-columns: minmax(0, 1fr) minmax(110px, 0.16fr) minmax(210px, 0.3fr);
   gap: clamp(1rem, 3vw, 3rem);
 }
 
@@ -198,33 +198,79 @@ a:focus-visible {
   line-height: 1.15;
 }
 
-.hero-intro {
-  max-width: 530px;
-  margin: 2rem 0 0;
-  color: rgba(255, 250, 242, 0.78);
-  font-size: clamp(1rem, 1.5vw, 1.2rem);
-  line-height: 1.6;
-}
-
-.hero-date {
-  align-self: end;
-  padding-bottom: 0.5rem;
-  color: rgba(255, 250, 242, 0.78);
-  font-size: 0.7rem;
+.hero h1 em {
+  display: block;
+  margin-top: 0.25em;
+  color: var(--yellow);
+  font-family: var(--sans);
+  font-size: 0.24em;
+  font-style: normal;
   font-weight: 600;
-  letter-spacing: 0.13em;
+  letter-spacing: 0.16em;
+  line-height: 1;
   text-transform: uppercase;
 }
 
-.date-number {
+.hero-atmosphere {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1rem 0;
+}
+
+.red-lamps {
+  display: flex;
+  gap: 1rem;
+}
+
+.red-lamps i {
+  position: relative;
   display: block;
-  margin-bottom: 0.15rem;
-  color: var(--cream);
-  font-family: var(--serif);
-  font-size: clamp(3rem, 5vw, 5.2rem);
-  font-weight: 400;
-  letter-spacing: -0.06em;
-  line-height: 1;
+  width: 20px;
+  height: 42px;
+  border: 2px solid rgba(255, 250, 242, 0.8);
+  border-radius: 50% 50% 20% 20%;
+  background: #ff294f;
+  box-shadow:
+    0 0 12px #ff294f,
+    0 0 32px rgba(255, 41, 79, 0.8);
+}
+
+.red-lamps i::before {
+  position: absolute;
+  top: -24px;
+  left: 50%;
+  width: 1px;
+  height: 24px;
+  background: rgba(255, 250, 242, 0.6);
+  content: "";
+}
+
+.hero-leaf {
+  width: 90px;
+  fill: none;
+  stroke: #8ac180;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+  stroke-width: 3;
+  filter: drop-shadow(0 0 8px rgba(138, 193, 128, 0.45));
+}
+
+.hero-photo {
+  align-self: center;
+  margin: 0;
+  padding: 7px;
+  rotate: 2deg;
+  background: var(--cream);
+  box-shadow: 0 20px 45px rgba(4, 31, 32, 0.32);
+}
+
+.hero-photo img {
+  display: block;
+  width: 100%;
+  height: clamp(320px, 42vw, 520px);
+  object-fit: cover;
 }
 
 .amsterdam-scene {
@@ -296,6 +342,14 @@ a:focus-visible {
   stroke-linecap: round;
   stroke-linejoin: round;
   stroke-width: 4;
+}
+
+.scene-leaves {
+  fill: none;
+  stroke: #8ac180;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+  stroke-width: 5;
 }
 
 .scene-water {
@@ -553,7 +607,11 @@ a:focus-visible {
 }
 
 .day-panel {
+  display: grid;
   padding: clamp(2.5rem, 5vw, 4.5rem) 0 0;
+  align-items: stretch;
+  grid-template-columns: minmax(210px, 0.32fr) 1fr;
+  gap: clamp(1.5rem, 4vw, 4rem);
 }
 
 .js .day-panel {
@@ -561,8 +619,26 @@ a:focus-visible {
 }
 
 .js .day-panel.is-active {
-  display: block;
+  display: grid;
   animation: reveal 260ms ease-out;
+}
+
+.day-photo {
+  min-height: 420px;
+  margin: 0;
+  overflow: hidden;
+  border-radius: 160px 160px 4px 4px;
+}
+
+.day-photo img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.day-photo--wide {
+  border-radius: 4px 4px 160px 160px;
 }
 
 @keyframes reveal {
@@ -795,10 +871,10 @@ a:focus-visible {
   position: relative;
   display: grid;
   max-width: 1120px;
-  min-height: 950px;
+  min-height: 1020px;
   margin: 0 auto;
   grid-template-columns: repeat(12, 1fr);
-  grid-template-rows: repeat(12, 67px);
+  grid-template-rows: repeat(13, 67px);
 }
 
 .photo {
@@ -813,50 +889,49 @@ a:focus-visible {
 .photo img {
   display: block;
   width: 100%;
-  height: calc(100% - 44px);
+  height: 100%;
   object-fit: cover;
-}
-
-.photo figcaption {
-  padding: 0.7rem 0.2rem 0.2rem;
-  color: var(--ink-soft);
-  font-size: 0.62rem;
-  letter-spacing: 0.02em;
 }
 
 .photo--one {
   z-index: 3;
-  grid-column: 1 / 5;
-  grid-row: 1 / 8;
+  grid-column: 1 / 4;
+  grid-row: 1 / 7;
   rotate: -2deg;
 }
 
 .photo--two {
-  grid-column: 5 / 10;
-  grid-row: 2 / 9;
+  grid-column: 4 / 7;
+  grid-row: 2 / 8;
   rotate: 1.5deg;
 }
 
 .photo--three {
   z-index: 4;
-  grid-column: 8 / 13;
-  grid-row: 7 / 13;
+  grid-column: 7 / 13;
+  grid-row: 1 / 7;
   rotate: -1deg;
 }
 
 .photo--four {
-  grid-column: 2 / 7;
-  grid-row: 8 / 13;
+  grid-column: 2 / 6;
+  grid-row: 8 / 14;
   rotate: 2deg;
+}
+
+.photo--five {
+  grid-column: 7 / 11;
+  grid-row: 7 / 14;
+  rotate: -1.5deg;
 }
 
 .gallery-sticker {
   position: absolute;
   z-index: 8;
-  top: 43%;
-  left: 39%;
+  top: 47%;
+  left: 46%;
   display: grid;
-  width: 150px;
+  width: 125px;
   aspect-ratio: 1;
   place-content: center;
   border-radius: 50%;
@@ -868,7 +943,7 @@ a:focus-visible {
 
 .gallery-sticker span {
   font-family: var(--serif);
-  font-size: 4.4rem;
+  font-size: 3.8rem;
   letter-spacing: -0.08em;
   line-height: 0.8;
 }
@@ -1013,15 +1088,17 @@ footer {
   }
 
   .hero-grid {
-    grid-template-columns: 28px 1fr;
-  }
-
-  .hero-date {
-    grid-column: 2;
+    grid-template-columns: minmax(0, 1fr) 90px;
   }
 
   .hero h1 {
     font-size: clamp(3.8rem, 15vw, 6.3rem);
+  }
+
+  .hero-photo {
+    width: min(58vw, 340px);
+    margin-left: auto;
+    grid-column: 1 / -1;
   }
 
   .amsterdam-scene {
@@ -1068,9 +1145,9 @@ footer {
   }
 
   .photo-collage {
-    min-height: 1200px;
+    min-height: 1380px;
     grid-template-columns: repeat(2, 1fr);
-    grid-template-rows: repeat(20, 54px);
+    grid-template-rows: repeat(24, 54px);
   }
 
   .photo--one {
@@ -1091,6 +1168,11 @@ footer {
   .photo--four {
     grid-column: 2;
     grid-row: 13 / 21;
+  }
+
+  .photo--five {
+    grid-column: 1;
+    grid-row: 18 / 25;
   }
 
   .gallery-sticker {
@@ -1133,8 +1215,25 @@ footer {
     font-size: 0.52em;
   }
 
-  .hero-intro {
-    margin-top: 1.4rem;
+  .hero h1 em {
+    font-size: 0.2em;
+  }
+
+  .hero-atmosphere {
+    justify-content: space-around;
+  }
+
+  .hero-leaf {
+    width: 62px;
+  }
+
+  .red-lamps {
+    gap: 0.55rem;
+  }
+
+  .red-lamps i {
+    width: 14px;
+    height: 32px;
   }
 
   .amsterdam-scene {
@@ -1210,6 +1309,17 @@ footer {
     gap: 0.8rem;
   }
 
+  .day-panel,
+  .js .day-panel.is-active {
+    grid-template-columns: 1fr;
+  }
+
+  .day-photo {
+    min-height: 320px;
+    max-height: 480px;
+    border-radius: 120px 120px 4px 4px;
+  }
+
   .event-icon {
     width: 39px;
     height: 39px;
@@ -1226,8 +1336,8 @@ footer {
   }
 
   .photo-collage {
-    min-height: 900px;
-    grid-template-rows: repeat(20, 40px);
+    min-height: 1060px;
+    grid-template-rows: repeat(24, 42px);
   }
 
   .photo {
