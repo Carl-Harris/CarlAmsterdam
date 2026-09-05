@@ -7,7 +7,7 @@ const photoFiles = Array.from(
   (_, index) => `assets/photos/amsterdam-0${index + 1}.jpg`,
 );
 const requiredFiles = [
-  "assets/styles.css",
+  "assets/amsterdam.css",
   "assets/main.js",
   "assets/favicon.svg",
   ...photoFiles,

@@ -1,9 +1,9 @@
 # Carls 30-årshelg i Amsterdam
 
 En snabb, responsiv och tillgänglig statisk webbplats för födelsedagshelgen
-16–18 oktober 2026. Uttrycket blandar Amsterdams kanaler, cyklar, tre kryss,
-neon och gröna kultur med ett lekfullt redaktionellt formspråk. Webbplatsen är
-byggd utan externa JavaScript-beroenden och publiceras med GitHub Pages.
+16–18 oktober 2026. Uttrycket hämtar inspiration från Amsterdams kanalhus,
+broar, cyklar, tulpaner och vatten. Webbplatsen är byggd utan externa
+JavaScript-beroenden och publiceras med GitHub Pages.
 
 ## Kör lokalt
 
@@ -34,7 +34,7 @@ repositoryts **Settings → Pages**.
 ## Struktur
 
 - `index.html` – semantiskt innehåll och program
-- `assets/styles.css` – layout, färger, responsivitet och reducerad rörelse
+- `assets/amsterdam.css` – layout, färger, responsivitet och reducerad rörelse
 - `assets/main.js` – tangentbordsstyrda programflikar
 - `assets/photos/` – de fyra oförändrade originalbilderna
 - `assets/venues/` – oförändrade lokalbilder och optimerade webbderivat
